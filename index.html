@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parth Agarwal — ECE Engineer & Innovator</title>
+  <meta name="description" content="Personal portfolio of Parth Agarwal, Electronics & Communication Engineering student at VIT Vellore. Explore projects, skills, and experience." />
+  <meta name="keywords" content="Parth Agarwal, ECE, VIT Vellore, Electronics, Embedded Systems, Portfolio" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Three.js CDN for 3D ParticleWave Intro Background -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+  <!-- ===== THREE.JS 3D PARTICLE WAVE INTRO SPLASH PAGE ===== -->
+  <div class="intro-screen" id="introScreen" aria-label="Intro splash screen">
+    <canvas id="introParticleCanvas" class="intro-particle-canvas" aria-hidden="true"></canvas>
+    <div class="intro-content-full">
+      <div class="intro-badge">
+        <svg class="intro-icon-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+        <span>Portfolio Preview</span>
+      </div>
+      
+      <div class="intro-avatar-ring">
+        <img src="parth-photo.png" alt="Parth Agarwal" class="intro-avatar-img" />
+      </div>
+      
+      <h1 class="intro-title">Parth Agarwal</h1>
+      <p class="intro-caption">Electronics &amp; Communication Engineering Student</p>
+      
+      <div class="intro-loader-container">
+        <div class="intro-progress-bar" id="introProgressBar"></div>
+      </div>
+      
+      <button class="intro-enter-btn" id="introEnterBtn" aria-label="Enter Portfolio">
+        <span>Explore Experience</span>
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ===== LIVE BLACK & DOT MATRIX BACKGROUND (MAIN PAGE) ===== -->
+  <canvas id="dotCanvas" class="dot-matrix-canvas" aria-hidden="true"></canvas>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" aria-label="Parth Agarwal Home">
+        <span class="logo-text">PA</span>
+      </a>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero" aria-labelledby="hero-name">
+    <div class="hero-content">
+      <div class="hero-badge reveal">
+        <span class="badge-dot"></span>
+        <span>Open to Opportunities</span>
+      </div>
+      <h1 class="hero-name reveal" id="hero-name">Parth<br /><span class="gradient-text">Agarwal</span></h1>
+      <p class="hero-tagline reveal">ECE Student &bull; Data Analytics &amp; AI Developer</p>
+      <p class="hero-intro reveal">
+        ECE student at <strong>VIT Vellore</strong> — building at the intersection of embedded systems, robotics, machine learning, and <strong>Data Analytics</strong>. Passionate about transforming complex datasets and sensor feeds into intelligent, real-world solutions.
+      </p>
+      <div class="hero-cta reveal">
+        <a href="#contact" class="btn btn-primary" id="hero-contact-btn">Contact Me</a>
+        <a href="#" class="btn btn-glass" id="hero-resume-btn" onclick="alert('Resume download coming soon!')">Download Resume</a>
+      </div>
+      <div class="hero-scroll reveal" aria-hidden="true">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </div>
+    <div class="hero-visual reveal" aria-hidden="true">
+      <div class="hero-portrait-card">
+        <div class="hero-portrait-frame">
+          <img src="parth-photo.png" alt="Parth Agarwal — ECE & Data Analytics Student at VIT Vellore" class="hero-portrait-img" />
+          <div class="hero-portrait-overlay"></div>
+          <div class="hero-portrait-badge">
+            <span class="badge-dot"></span>
+            <span>VIT Vellore &bull; ECE &amp; Analytics</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="floating-chip chip-1">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+        <span>Data Analytics &amp; AI</span>
+      </div>
+
+      <div class="floating-chip chip-2">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+        <span>Embedded Systems</span>
+      </div>
+
+      <div class="floating-chip chip-3">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"></rect><circle cx="12" cy="5" r="2"></circle><path d="M12 7v4"></path><line x1="8" y1="16" x2="8" y2="16.01"></line><line x1="16" y1="16" x2="16" y2="16.01"></line></svg>
+        <span>Robotics &amp; YOLO</span>
+      </div>
+
+      <div class="floating-chip chip-4">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        <span>RAG &amp; Vector Search</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section" id="about" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="section-label reveal">About Me</div>
+      <h2 class="section-title reveal" id="about-heading">Curious engineer.<br />Bold builder.</h2>
+      <div class="about-grid">
+        <div class="glass-card about-card reveal">
+          <div class="about-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <h3>Education</h3>
+          <p>Pursuing B.Tech in Electronics &amp; Communication Engineering at <strong>Vellore Institute of Technology</strong>, one of India's premier technical universities.</p>
+        </div>
+        <div class="glass-card about-card reveal">
+          <div class="about-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+          </div>
+          <h3>Research &amp; Technical Focus</h3>
+          <p>Deeply interested in <strong>Data Analytics</strong> (SQL, Python EDA, Vector Databases), <strong>AI/ML applications</strong>, autonomous robotics, embedded systems, and building intelligent data-driven platforms.</p>
+        </div>
+        <div class="glass-card about-card reveal">
+          <div class="about-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-3.05 11a22.35 22.35 0 0 1-3.95 2z"/><path d="M9 12l-2 2"/><path d="M15 9l-2 2"/></svg>
+          </div>
+          <h3>Beyond Engineering</h3>
+          <p>Active member of VIT's <strong>Entrepreneurship Cell</strong> and event coordinator — bridging technical expertise with leadership, strategy, and innovation-driven thinking.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section class="section" id="education" aria-labelledby="education-heading">
+    <div class="container">
+      <div class="section-label reveal">Academic Journey</div>
+      <h2 class="section-title reveal" id="education-heading">Education</h2>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="glass-card timeline-card">
+            <div class="edu-header">
+              <div class="edu-icon">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M5 21V7l8-4v18"></path><path d="M19 21V11l-6-3"></path><path d="M9 9v.01"></path><path d="M9 12v.01"></path><path d="M9 15v.01"></path><path d="M9 18v.01"></path></svg>
+              </div>
+              <div>
+                <div class="edu-period">Aug 2023 – Present</div>
+                <div class="edu-badge current">Current</div>
+              </div>
+            </div>
+            <h3 class="edu-school">Vellore Institute of Technology</h3>
+            <p class="edu-location">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Vellore, Tamil Nadu</span>
+            </p>
+            <p class="edu-degree">Bachelor of Technology — Electronics &amp; Communication Engineering</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="glass-card timeline-card">
+            <div class="edu-header">
+              <div class="edu-icon">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              </div>
+              <div>
+                <div class="edu-period">Mar 2022 – Apr 2023</div>
+                <div class="edu-score">86%</div>
+              </div>
+            </div>
+            <h3 class="edu-school">RD International School</h3>
+            <p class="edu-location">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Dwarka, New Delhi</span>
+            </p>
+            <p class="edu-degree">Class XII — Physics, Chemistry, Mathematics</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="glass-card timeline-card">
+            <div class="edu-header">
+              <div class="edu-icon">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              </div>
+              <div>
+                <div class="edu-period">Mar 2020 – Apr 2021</div>
+                <div class="edu-score">94%</div>
+              </div>
+            </div>
+            <h3 class="edu-school">St. Joseph's College</h3>
+            <p class="edu-location">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Nainital, Uttarakhand</span>
+            </p>
+            <p class="edu-degree">Class X — STEM</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section class="section" id="experience" aria-labelledby="experience-heading">
+    <div class="container">
+      <div class="section-label reveal">Work History</div>
+      <h2 class="section-title reveal" id="experience-heading">Experience</h2>
+      <div class="exp-grid">
+
+        <div class="glass-card exp-card reveal">
+          <div class="exp-top">
+            <div class="exp-icon">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+            </div>
+            <div class="exp-meta">
+              <span class="exp-period">Jun 2026</span>
+              <span class="exp-type">Internship</span>
+            </div>
+          </div>
+          <h3 class="exp-role">Engineering Intern</h3>
+          <p class="exp-org">Spark Minda Corporation Limited</p>
+          <ul class="exp-bullets">
+            <li>Researched electronic immobilizer systems for two- and four-wheeler vehicle security applications.</li>
+            <li>Studied architecture of automotive electronic locking and anti-theft systems.</li>
+            <li>Gained hands-on exposure to automotive electronics and security system design in an industry setting.</li>
+          </ul>
+        </div>
+
+        <div class="glass-card exp-card reveal">
+          <div class="exp-top">
+            <div class="exp-icon">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v2z"></path><path d="M13 5v2"></path><path d="M13 17v2"></path><path d="M13 11v2"></path></svg>
+            </div>
+            <div class="exp-meta">
+              <span class="exp-period">Aug 2024 – Mar 2025</span>
+              <span class="exp-type">Coordinator</span>
+            </div>
+          </div>
+          <h3 class="exp-role">Sales &amp; Proshow Coordinator</h3>
+          <p class="exp-org">VIT Vellore — Gravitas'24 &amp; Riviera'25</p>
+          <ul class="exp-bullets">
+            <li>Managed merchandise sales, inventory tracking, distribution and customer handling during high-footfall events.</li>
+            <li>Coordinated ticketing, crowd handling, event logistics, and smooth execution of performances.</li>
+          </ul>
+        </div>
+
+        <div class="glass-card exp-card reveal">
+          <div class="exp-top">
+            <div class="exp-icon">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>
+            </div>
+            <div class="exp-meta">
+              <span class="exp-period">Jan 2025 – Dec 2025</span>
+              <span class="exp-type">Leadership</span>
+            </div>
+          </div>
+          <h3 class="exp-role">Senior Core — Entrepreneurship Cell</h3>
+          <p class="exp-org">VIT Vellore</p>
+          <ul class="exp-bullets">
+            <li>Planning and execution of entrepreneurship events, workshops, and networking sessions.</li>
+            <li>Coordinated with teams for promotions, speaker outreach, and participant engagement.</li>
+            <li>Strengthened leadership, strategic planning, and communication skills.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="section" id="projects" aria-labelledby="projects-heading">
+    <div class="container">
+      <div class="section-label reveal">What I've Built</div>
+      <h2 class="section-title reveal" id="projects-heading">Projects</h2>
+      <div class="projects-grid">
+
+        <div class="glass-card project-card featured-project reveal">
+          <div class="project-header">
+            <div class="project-svg-icon">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path><line x1="9" y1="10" x2="15" y2="10"></line><line x1="12" y1="7" x2="12" y2="13"></line></svg>
+            </div>
+            <span class="project-date">2025</span>
+          </div>
+          <h3 class="project-title">InsightDesk AI</h3>
+          <p class="project-desc">Built an AI-powered feedback analytics platform with secure authentication, RAG-based semantic search/chat (MongoDB Atlas Vector Search + Gemini embeddings), automated sentiment analysis and summarization, and a custom glassmorphic dashboard UI.</p>
+          <div class="project-tags">
+            <span class="tag">Flask</span>
+            <span class="tag">MongoDB Atlas</span>
+            <span class="tag">Vector Search</span>
+            <span class="tag">Gemini API</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Sentiment Analysis</span>
+          </div>
+        </div>
+
+        <div class="glass-card project-card reveal">
+          <div class="project-header">
+            <div class="project-svg-icon">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"></path></svg>
+            </div>
+            <span class="project-date">Dec 2024 – Mar 2025</span>
+          </div>
+          <h3 class="project-title">Temperature-Controlled Cooling Fan</h3>
+          <p class="project-desc">Designed a fan system that automatically adjusts speed based on real-time temperature sensor readings using embedded control logic.</p>
+          <div class="project-tags">
+            <span class="tag">Embedded C</span>
+            <span class="tag">Sensors</span>
+            <span class="tag">PWM Control</span>
+            <span class="tag">Circuit Design</span>
+          </div>
+        </div>
+
+        <div class="glass-card project-card reveal">
+          <div class="project-header">
+            <div class="project-svg-icon">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"></rect><circle cx="12" cy="5" r="2"></circle><path d="M12 7v4"></path><line x1="8" y1="16" x2="8" y2="16.01"></line><line x1="16" y1="16" x2="16" y2="16.01"></line></svg>
+            </div>
+            <span class="project-date">Feb 2026 – Apr 2026</span>
+          </div>
+          <h3 class="project-title">Line Following Robot + YOLO</h3>
+          <p class="project-desc">Built an autonomous robot using IR sensors for path detection. Enhanced with YOLO for real-time object detection and obstacle recognition, improving intelligence and decision-making.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">YOLO</span>
+            <span class="tag">IR Sensors</span>
+            <span class="tag">Computer Vision</span>
+            <span class="tag">Robotics</span>
+          </div>
+        </div>
+
+        <div class="glass-card project-card reveal">
+          <div class="project-header">
+            <div class="project-svg-icon">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18"></path><path d="M6 6l12 12"></path><circle cx="12" cy="12" r="9"></circle></svg>
+            </div>
+            <span class="project-date">Aug 2025 – Nov 2025</span>
+          </div>
+          <h3 class="project-title">Weather-Based Traffic Signal Control</h3>
+          <p class="project-desc">Developed a smart signal system that dynamically modifies light timing based on real-time environmental conditions and traffic density inputs.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">IoT</span>
+            <span class="tag">Smart Systems</span>
+            <span class="tag">Simulation</span>
+          </div>
+        </div>
+
+        <div class="glass-card project-card reveal">
+          <div class="project-header">
+            <div class="project-svg-icon">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"></path><path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"></path><circle cx="12" cy="12" r="2"></circle><path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"></path><path d="M19.1 4.9c3.9 3.9 3.9 10.3 0 14.2"></path></svg>
+            </div>
+            <span class="project-date">Jan 2025 – Mar 2025</span>
+          </div>
+          <h3 class="project-title">ML-Based FSO Communication Optimization</h3>
+          <p class="project-desc">Designed and simulated a Free Space Optical (FSO) communication system using ML for BER prediction and adaptive power control, improving reliability under atmospheric impairments.</p>
+          <div class="project-tags">
+            <span class="tag">MATLAB</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">FSO</span>
+            <span class="tag">Signal Processing</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section" id="skills" aria-labelledby="skills-heading">
+    <div class="container">
+      <div class="section-label reveal">Capabilities</div>
+      <h2 class="section-title reveal" id="skills-heading">Skills &amp; Tools</h2>
+      <div class="skills-grid">
+
+        <div class="glass-card skills-card reveal">
+          <div class="skills-cat-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          </div>
+          <h3 class="skills-cat">Data Analytics &amp; AI</h3>
+          <div class="pills">
+            <span class="pill">SQL</span>
+            <span class="pill">Pandas / NumPy</span>
+            <span class="pill">Power BI / Tableau</span>
+            <span class="pill">Exploratory Data Analysis (EDA)</span>
+            <span class="pill">MongoDB Vector Search</span>
+            <span class="pill">RAG &amp; Embeddings</span>
+            <span class="pill">Statistical Modeling</span>
+          </div>
+        </div>
+
+        <div class="glass-card skills-card reveal">
+          <div class="skills-cat-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          </div>
+          <h3 class="skills-cat">Languages</h3>
+          <div class="pills">
+            <span class="pill">SQL</span>
+            <span class="pill">Python</span>
+            <span class="pill">JavaScript</span>
+            <span class="pill">Java</span>
+            <span class="pill">Verilog</span>
+            <span class="pill">MATLAB</span>
+            <span class="pill">R Programming</span>
+            <span class="pill">Embedded C</span>
+          </div>
+        </div>
+
+        <div class="glass-card skills-card reveal">
+          <div class="skills-cat-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+          </div>
+          <h3 class="skills-cat">Tools &amp; Software</h3>
+          <div class="pills">
+            <span class="pill">MongoDB Atlas</span>
+            <span class="pill">Power BI</span>
+            <span class="pill">ModelSim</span>
+            <span class="pill">Multisim</span>
+            <span class="pill">Keil</span>
+            <span class="pill">Cadence Virtuoso</span>
+            <span class="pill">AWR Microwave</span>
+            <span class="pill">Overleaf</span>
+            <span class="pill">Netsim</span>
+          </div>
+        </div>
+
+        <div class="glass-card skills-card reveal">
+          <div class="skills-cat-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <h3 class="skills-cat">Soft Skills</h3>
+          <div class="pills">
+            <span class="pill">Leadership</span>
+            <span class="pill">Teamwork</span>
+            <span class="pill">Communication</span>
+            <span class="pill">Strategy</span>
+            <span class="pill">Adaptability</span>
+            <span class="pill">Collaboration</span>
+          </div>
+        </div>
+
+        <div class="glass-card skills-card reveal">
+          <div class="skills-cat-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+          </div>
+          <h3 class="skills-cat">Certifications</h3>
+          <div class="pills">
+            <span class="pill cert-pill">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+              <span>VIT Make-a-thon (Finalist)</span>
+            </span>
+            <span class="pill cert-pill">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              <span>VIT Ad-athon</span>
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section" id="contact" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="section-label reveal">Get In Touch</div>
+      <h2 class="section-title reveal" id="contact-heading">Let's Connect</h2>
+      <div class="contact-layout">
+        <div class="contact-info reveal">
+          <div class="glass-card contact-card">
+            <h3>Contact Details</h3>
+            <div class="contact-items">
+              <a href="tel:+918957084126" class="contact-item" id="contact-phone">
+                <div class="contact-item-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <div>
+                  <div class="contact-item-label">Phone</div>
+                  <div class="contact-item-value">+91 8957084126</div>
+                </div>
+              </a>
+              <a href="mailto:agarwalparth3011@gmail.com" class="contact-item" id="contact-email">
+                <div class="contact-item-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div>
+                  <div class="contact-item-label">Email</div>
+                  <div class="contact-item-value">agarwalparth3011@gmail.com</div>
+                </div>
+              </a>
+              <a href="https://www.linkedin.com/in/parth-agarwal-b5a004288?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener noreferrer" class="contact-item" id="contact-linkedin">
+                <div class="contact-item-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </div>
+                <div>
+                  <div class="contact-item-label">LinkedIn</div>
+                  <div class="contact-item-value">View Profile</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap reveal">
+          <div class="glass-card">
+            <h3>Send a Message</h3>
+            <form class="contact-form" id="contactForm" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contactName">Name</label>
+                  <input type="text" id="contactName" name="name" placeholder="Your name" required autocomplete="name" />
+                </div>
+                <div class="form-group">
+                  <label for="contactEmail">Email</label>
+                  <input type="email" id="contactEmail" name="email" placeholder="your@email.com" required autocomplete="email" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="contactSubject">Subject</label>
+                <input type="text" id="contactSubject" name="subject" placeholder="What's this about?" />
+              </div>
+              <div class="form-group">
+                <label for="contactMessage">Message</label>
+                <textarea id="contactMessage" name="message" placeholder="Your message..." rows="5" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full" id="contactSubmit">
+                <span>Send Message</span>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+              <div class="form-success" id="formSuccess" aria-live="polite">
+                Message sent! I'll get back to you soon.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">PA</div>
+        <p class="footer-tagline">Building the future, one circuit at a time.</p>
+        <div class="footer-socials">
+          <a href="mailto:agarwalparth3011@gmail.com" class="social-link" aria-label="Email Parth" id="footer-email">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/parth-agarwal-b5a004288?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn" id="footer-linkedin">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+          <a href="tel:+918957084126" class="social-link" aria-label="Phone" id="footer-phone">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          </a>
+        </div>
+        <p class="footer-copy">&copy; 2026 Parth Agarwal. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- EmailJS Browser SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
